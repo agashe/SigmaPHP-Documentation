@@ -1,13 +1,21 @@
 <?php
 
 use App\Controllers\MainController;
+use App\Controllers\DocsController;
 
 return [
     [
-        'name' => 'welcome',
         'path' => '/',
-        'method' => 'get',
         'controller' => MainController::class,
-        'action' => 'index',
-    ]
+        'action' => 'home',
+    ],
+    [
+        'path' => '/about',
+        'controller' => MainController::class,
+        'action' => 'about',
+    ],
+    [
+        'path' => '/docs/{subject}/{sub?}',
+        'controller' => DocsController::class,
+    ],
 ];

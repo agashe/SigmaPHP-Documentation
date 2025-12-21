@@ -3,18 +3,27 @@
 namespace App\Controllers;
 
 use SigmaPHP\Core\Controllers\BaseController;
-use SigmaPHP\Core\Http\Request;
 use SigmaPHP\Core\Http\Response;
 
 class MainController extends BaseController
 {
     /**
-     * Welcome page.
-     * 
+     * Home page.
+     *
      * @return Response
      */
-    public function index(Request $request)
+    public function home()
     {
-        return $this->render('app', ['version' => version()]);
+        return $this->render('home');
+    }
+
+    /**
+     * About page.
+     *
+     * @return Response
+     */
+    public function about()
+    {
+        return $this->render('about');
     }
 }
