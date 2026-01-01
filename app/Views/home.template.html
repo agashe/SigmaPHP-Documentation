@@ -2,20 +2,6 @@
 
 {% block 'content' %}
 
-<!-- Header -->
-<header>
-    <div class="brand">
-        <img src="/assets/images/SigmaPHP-Logo.png" alt="SigmaPHP Logo" />
-        SigmaPHP
-    </div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Documentation</a>
-        <a href="#">About</a>
-    </nav>
-</header>
-
-<!-- Hero -->
 <section class="hero">
     <h1>SigmaPHP</h1>
     <div class="line"></div>
@@ -29,18 +15,17 @@
     </p>
 
     <div class="hero-links">
-        <a href="#" class="primary">
-            <i class="bi bi-journal-code"></i>
-            Read the Documentation
+        <a href="/docs" class="primary">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            Get Started
         </a>
         <a href="https://github.com/agashe/SigmaPHP" target="_blank">
             <i class="bi bi-github"></i>
-            View on GitHub
+            Check GitHub
         </a>
     </div>
 </section>
 
-<!-- Features -->
 <section class="features">
     <div class="center">
         <h2>Main Features</h2>
@@ -66,7 +51,6 @@
     </ul>
 </section>
 
-<!-- Components -->
 <section>
     <div class="center">
         <h2>Core Components</h2>
@@ -126,16 +110,12 @@
     </div>
 </section>
 
-<!-- Try -->
 <section class="try">
     <h2>Try It Now</h2>
     <div class="line"></div>
     <p>Explore the demo application and see SigmaPHP in action.</p>
-    <a href="https://github.com/agashe/SigmaPHP-Demo" target="_blank">Demo Application on GitHub <i class="bi bi-box-arrow-up-right"></i></a>
+    <a href="https://github.com/agashe/SigmaPHP-Demo" target="_blank">Demo Application on GitHub <i
+            class="bi bi-box-arrow-up-right"></i></a>
 </section>
 
-<!-- Footer -->
-<footer>
-    SigmaPHP <i class="bi bi-c-circle"></i> {{ date('Y') }}
-</footer>
 {% end_block %}

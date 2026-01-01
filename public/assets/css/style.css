@@ -161,3 +161,25 @@ footer {
     color: var(--muted);
     font-size: 0.9rem;
 }
+
+/* Social */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    font-weight: 600;
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+/* Support */
+.support {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
