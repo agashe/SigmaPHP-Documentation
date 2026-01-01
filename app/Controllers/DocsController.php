@@ -15,6 +15,6 @@ class DocsController extends BaseController
      */
     public function __invoke(string $subject, string $sub = '')
     {
-        return $this->render('home');
+        return $this->render('docs');
     }
 }
