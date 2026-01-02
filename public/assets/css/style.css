@@ -206,12 +206,13 @@ footer {
 .docs-brand {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     font-size: 20px;
     font-weight: bold;
     color: #e0e0e0;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .docs-brand:hover {
@@ -253,6 +254,7 @@ footer {
 }
 
 .nav-sub {
+    display: none;
     margin-left: 12px;
     border-left: 1px solid #2a2a2a;
     padding-left: 10px;
@@ -263,14 +265,19 @@ footer {
     color: #aaa;
 }
 
+.nav-toggle {
+    cursor: pointer;
+}
+
 /* Docs Content */
 .docs-content {
     flex: 1;
-    padding: 40px;
+    padding: 0px 40px;
     max-width: 900px;
 }
 
 .docs-content h1 {
+    margin-top: 10px;
     margin-bottom: 16px;
 }
 
@@ -281,21 +288,57 @@ footer {
 
 /* Docs Code Card */
 .code-card {
-    background: #111;
-    border: 1px solid #2a2a2a;
-    border-left: 4px solid #ffa500;
+    position: relative;
     border-radius: 8px;
-    padding: 16px;
-    margin: 24px 0;
     overflow-x: auto;
 }
 
-.code-card pre {
-    margin: 0;
+.code-card pre code {
+    border-radius: 8px;
+    padding-bottom: 2em !important;
 }
 
-.code-card code {
-    color: #e0e0e0;
-    font-family: monospace;
+.copy-btn {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+    padding: 4px 8px;
+    background: #ffa500;
+    border: none;
+    border-radius: 4px;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.copy-btn:hover {
+    opacity: 0.9;
+}
+
+/* Docs Terminal Card */
+.terminal-card {
+    position: relative;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.terminal-card pre code {
+    border-radius: 8px;
+    padding-bottom: 2em !important;
+}
+
+/* Docs Version Selector */
+.version-selector {
+    margin-bottom: 15px;
+    text-align: center;
     font-size: 14px;
+}
+
+.version-selector select {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
 }

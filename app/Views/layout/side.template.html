@@ -6,6 +6,13 @@
         </a>
     </div>
 
+    <div class="version-selector">
+        <label for="version">Version:</label>
+        <select id="version">
+            <option value="1.0">0.1.x</option>
+        </select>
+    </div>
+
     <input type="text" class="docs-search" placeholder="Search docs..." />
 
     <nav class="docs-nav">
@@ -13,7 +20,7 @@
         <a href="#">Installation</a>
 
         <div class="nav-group">
-            <a href="#">Routing</a>
+            <a href="javascript:void(0)" class="nav-toggle">Routing</a>
             <div class="nav-sub">
                 <a href="#">Basic Routes</a>
                 <a href="#">Route Parameters</a>
@@ -22,7 +29,7 @@
         </div>
 
         <div class="nav-group">
-            <a href="#">Database</a>
+            <a href="javascript:void(0)" class="nav-toggle">Database</a>
             <div class="nav-sub">
                 <a href="#">Configuration</a>
                 <a href="#">ORM</a>
