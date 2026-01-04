@@ -2,19 +2,63 @@
 
 namespace App\Controllers;
 
+use App\Models\Category;
+use App\Models\Version;
+use App\Models\Page;
 use SigmaPHP\Core\Controllers\BaseController;
 
 class DocsController extends BaseController
 {
     /**
+     * @var Version $versionModel
+     */
+    private $versionModel;
+
+    /**
+     * @var Category $categoryModel
+     */
+    private $categoryModel;
+
+    /**
+     * @var Page $pageModel
+     */
+    private $pageModel;
+
+    /**
+     * DocsController constructor.
+     *
+     * @param Version $versionModel
+     * @param Category $categoryModel
+     * @param Page $pageModel
+     */
+    public function __construct(
+        Version $versionModel,
+        Category $categoryModel,
+        Page $pageModel
+    ) {
+        $this->versionModel = $versionModel;
+        $this->categoryModel = $categoryModel;
+        $this->pageModel = $pageModel;
+    }
+
+    /**
      * Docs pages.
      *
-     * @param string $subject
-     * @param string $sub
+     * @param string $version
+     * @param string $category
      * @return Response
      */
-    public function __invoke(string $subject, string $sub = '')
+    public function __invoke($version, $category)
     {
-        return $this->render('docs');
+        $versions = $this->versionModel->all();
+        $currentVersion = $this->versionModel->findBy('name', $version);
+
+        $categories = $currentVersion->categories();
+        $currentCategory = $this->versionModel->findBy('name', $category);
+
+        $page = $currentCategory->page();
+
+        return $this->render('docs', compact('versions', 'categories', 'page'));
+        return $this->render('docs', compact('versions'));
     }
 }

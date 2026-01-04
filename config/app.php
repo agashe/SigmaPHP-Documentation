@@ -60,4 +60,9 @@ return [
      * running from a sub-directory. Otherwise, you can ignore this option !
      */
     'base_path' => env('BASE_PATH', ''),
+
+    /**
+     * Latest framework version (ignore patch !).
+     */
+    'framework_version' => '0.1.x',
 ];

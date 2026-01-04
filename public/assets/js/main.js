@@ -13,14 +13,14 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
 });
 
 // Sidebar sections expand/collapse
-document.querySelectorAll('.nav-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-        const sub = toggle.nextElementSibling;
-        sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
-    });
-});
+// document.querySelectorAll('.nav-toggle').forEach(toggle => {
+//     toggle.addEventListener('click', () => {
+//         const sub = toggle.nextElementSibling;
+//         sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+//     });
+// });
 
 // Version selector handler
 document.getElementById('version').addEventListener('change', function() {
-    // only 0.1 is available
+    // only 0.1.x is available currently
 });

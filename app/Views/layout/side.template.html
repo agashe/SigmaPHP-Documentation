@@ -9,7 +9,11 @@
     <div class="version-selector">
         <label for="version">Version:</label>
         <select id="version">
-            <option value="1.0">0.1.x</option>
+            {% for $version in $versions %}
+                <option value="{{ $version->name }}"
+                    {% if ($version == config('framework_version')) %}selected{% end_if %}
+                    >{{ $version->name }}</option>
+            {% end_for %}
         </select>
     </div>
 

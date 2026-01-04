@@ -15,7 +15,7 @@ return [
         'action' => 'about',
     ],
     [
-        'path' => '/docs/{subject}/{sub?}',
+        'path' => '/docs/{version}/{category}',
         'controller' => DocsController::class,
     ],
 ];
