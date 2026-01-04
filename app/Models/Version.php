@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use SigmaPHP\DB\ORM\Model;
+use SigmaPHP\Core\Models\BaseModel;
 use App\Models\Category;
 
-class Version extends Model
+class Version extends BaseModel
 {
     /**
      * Get all documentation topics in this version.

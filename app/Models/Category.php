@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use SigmaPHP\DB\ORM\Model;
+use SigmaPHP\Core\Models\BaseModel;
 use App\Models\Version;
 use App\Models\Page;
 
-class Category extends Model
+class Category extends BaseModel
 {
     /**
      * Get this category's version.

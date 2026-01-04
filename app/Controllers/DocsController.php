@@ -59,6 +59,5 @@ class DocsController extends BaseController
         $page = $currentCategory->page();
 
         return $this->render('docs', compact('versions', 'categories', 'page'));
-        return $this->render('docs', compact('versions'));
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use SigmaPHP\DB\ORM\Model;
+use SigmaPHP\Core\Models\BaseModel;
 use App\Models\Category;
 
-class Page extends Model
+class Page extends BaseModel
 {
     /**
      * Get this page's category.
